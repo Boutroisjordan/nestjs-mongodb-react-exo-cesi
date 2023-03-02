@@ -6,8 +6,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
-    .setTitle('Median')
-    .setDescription('The Median API description')
+    .setTitle("Chat j'ai péter")
+    .setDescription('sdfssf')
     .setVersion('0.1')
     .build();
 
