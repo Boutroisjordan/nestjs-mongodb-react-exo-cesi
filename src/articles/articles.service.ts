@@ -18,12 +18,12 @@ export class ArticlesService {
     return this.prisma.article.findMany({where: {published: false}});
   }
 
-  findOne(id: number) {
+  findOne(id: string) {
     return this.prisma.article.findUnique({where: {id: id}});
   }
 
 
-  update(id: number, updateArticleDto: UpdateArticleDto) {
+  update(id: string, updateArticleDto: UpdateArticleDto) {
     // return this.prisma.article.update(where: {id: id}, data: {UpdateArticleDto});
     return this.prisma.article.update({
       where: {
@@ -33,7 +33,7 @@ export class ArticlesService {
     })
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return this.prisma.article.delete({ where: { id } });
   }
 }
